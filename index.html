@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <title>Jogo SUDOKU</title>
+    </head>
+    <body>
+        <div id="container">
+            <div>
+                <div id="dadosJogador">
+                    <div>
+                        <h1>Sudoku</h1>
+                        <div id="formJogo">
+                            <div>
+                                <form name="jogo" action="">
+                                    <div>
+                                        <input name="nickname" placeholder="Informe seu nickname" height="10" maxlength="15"/>
+                                    </div>
+                                    <div>
+                                        <span>Fácil</span>
+                                        <input type="radio" name="nivel" value="Fácil" checked/>
+                                        <span>Médio</span>
+                                        <input type="radio" name="nivel" value="Médio"/>
+                                            <span>Díficil</span>
+                                        <input type="radio" name="nivel" value="Difícil"/>
+                                    </div>
+                                    <div>
+                                        <button type="button" name="buttonStart" onclick="start()" class="buttonStyle">Iniciar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="dadosJogo" hidden>
+                            <div>
+                                Nickname: <span id="nick"></span>
+                                <br/>
+                                Erros: <span id="errors"></span>
+                                <br/>
+                                Nível: <span id="level"></span>
+                                <br/>
+                                Tempo: <span id="timer"></span>
+                                <br/>
+                                <br/>
+                                <button type="button" name="buttonStart" onclick="quit()" class="buttonStyle">Desistir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div id="dadosTabuleiro" hidden>
+                    <table id="tabuleiro"></table>
+                    <div id="botoes">
+                        <button onclick="setNumberCell(1)">1</button>
+                        <button onclick="setNumberCell(2)">2</button>
+                        <button onclick="setNumberCell(3)">3</button>
+                        <button onclick="setNumberCell(4)">4</button>
+                        <button onclick="setNumberCell(5)">5</button>
+                        <button onclick="setNumberCell(6)">6</button>
+                        <button onclick="setNumberCell(7)">7</button>
+                        <button onclick="setNumberCell(8)">8</button>
+                        <button onclick="setNumberCell(9)">9</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="module">
+            import settings from './settings.js';
+            app.settings = settings;
+        </script>
+    </body>
+</html>
